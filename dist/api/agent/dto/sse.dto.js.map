@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../src/api/agent/dto/sse.dto.ts"],"sourcesContent":["export class SseMessage {\r\n  data: {\r\n    id: string;\r\n    type?: 'ai' | 'tool';\r\n    content: string;\r\n  };\r\n  type: string;\r\n}\r\n"],"names":["SseMessage"],"mappings":";;;;+BAAaA;;;eAAAA;;;AAAN,IAAA,AAAMA,aAAN,MAAMA;AAOb"}
