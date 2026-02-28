@@ -319,8 +319,6 @@ The agent executes a Think → Act → Observe loop. At each step it selects one
 
 ## Technical Presentation
 
-The full slide deck covering the problem, architecture, agent design, tool suite, and business impact is available below.
-
 [AI Ticket Classifier — Technical Presentation.pdf](AI%20Ticket%20Classifier%20%E2%80%94%20Technical%20Presentation.pdf)
 
 ---
