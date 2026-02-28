@@ -262,22 +262,6 @@ npm run test:watch
 npm run test:cov
 ```
 
-The Jest configuration enforces `maxWorkers: 1` and a 512 MB worker memory limit to prevent out-of-memory crashes caused by LangChain's deep TypeScript types during compilation.
-
-### Test files
-
-| File | Coverage |
-|---|---|
-| `src/tools/classification/classification.service.spec.ts` | ClassificationService |
-| `src/tools/extraction/extraction.service.spec.ts` | ExtractionService |
-| `src/tools/historical/historical.service.spec.ts` | HistoricalService |
-| `src/messaging/redis/redis.service.spec.ts` | RedisService |
-| `src/vector-search/knowledge-loader.service.spec.ts` | KnowledgeLoaderService |
-| `src/vector-search/vector-search.service.spec.ts` | VectorSearchService |
-| `src/api/agent/service/agent/agent.service.spec.ts` | AgentService |
-| `src/api/agent/controller/agent.controller.spec.ts` | AgentController |
-
----
 
 ## Architecture Overview
 
