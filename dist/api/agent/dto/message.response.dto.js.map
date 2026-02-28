@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../src/api/agent/dto/message.response.dto.ts"],"sourcesContent":["export class MessageResponseDto {\r\n  id: string; // Unique identifier for the message\r\n  type: 'human' | 'ai' | 'tool'; // Add other types as needed\r\n  content: any;\r\n}\r\n"],"names":["MessageResponseDto"],"mappings":";;;;+BAAaA;;;eAAAA;;;AAAN,IAAA,AAAMA,qBAAN,MAAMA;AAIb"}
