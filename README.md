@@ -10,7 +10,7 @@ This process is manual, slow (5–15 minutes per ticket), inconsistent across sh
 
 ## Solution
 
-AI Ticket Classifier is a full-stack application built around an **adaptive LangGraph ReAct agent** powered by Azure OpenAI GPT-4o. It takes a free-form support ticket as input and returns a fully structured analysis in under three seconds, covering:
+AI Ticket Classifier is a full-stack application built around an **adaptive LangGraph ReAct agent** powered by Azure OpenAI. It takes a free-form support ticket as input and returns a fully structured analysis in under three seconds, covering:
 
 - **Automatic classification** — category, priority (P1–P4), and owning team
 - **Metadata extraction** — urgency, affected systems, user impact, keywords, priority score, and escalation flag
@@ -136,7 +136,7 @@ AI-Ticket-Classifier/
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/chouket0102/AI-Ticket-Classifier.git
 cd AI-Ticket-Classifier
 ```
 
@@ -174,7 +174,6 @@ QDRANT_PORT=6333
 PORT=3001
 ```
 
-> The API version must be `2024-08-01-preview` or later. Earlier versions do not support the tool-calling interface required by LangGraph.
 
 ### 3. Start infrastructure services
 
@@ -262,21 +261,6 @@ npm run test:watch
 npm run test:cov
 ```
 
-The Jest configuration enforces `maxWorkers: 1` and a 512 MB worker memory limit to prevent out-of-memory crashes caused by LangChain's deep TypeScript types during compilation.
-
-### Test files
-
-| File | Coverage |
-|---|---|
-| `src/tools/classification/classification.service.spec.ts` | ClassificationService |
-| `src/tools/extraction/extraction.service.spec.ts` | ExtractionService |
-| `src/tools/historical/historical.service.spec.ts` | HistoricalService |
-| `src/messaging/redis/redis.service.spec.ts` | RedisService |
-| `src/vector-search/knowledge-loader.service.spec.ts` | KnowledgeLoaderService |
-| `src/vector-search/vector-search.service.spec.ts` | VectorSearchService |
-| `src/api/agent/service/agent/agent.service.spec.ts` | AgentService |
-| `src/api/agent/controller/agent.controller.spec.ts` | AgentController |
-
 ---
 
 ## Architecture Overview
@@ -311,7 +295,23 @@ The agent executes a Think → Act → Observe loop. At each step it selects one
 
 ## Team Bor3i
 
-| Name | Role |
-|---|---|
-| Yasser Chouket | 
+| Name |
+|---|
+| Yasser Chouket |
 | Yassine Chouket |
+
+---
+
+## Technical Presentation
+
+The full slide deck covering the problem, architecture, agent design, tool suite, and business impact is available below.
+
+[AI Ticket Classifier — Technical Presentation.pdf](AI%20Ticket%20Classifier%20%E2%80%94%20Technical%20Presentation.pdf)
+
+---
+
+## Demo
+
+<video src="DEMO.mp4" controls width="100%" style="border-radius:8px;border:1px solid #30363d;">
+  Your browser does not support the video tag. Download the demo: <a href="DEMO.mp4">DEMO.mp4</a>
+</video>
